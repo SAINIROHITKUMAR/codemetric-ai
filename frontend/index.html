@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeMetric AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>CodeMetric AI</h1>
+    <p class="subtitle">Automated Python Code Quality Assessment</p>
+
+    <textarea id="code" placeholder="Paste Python code here...">def calculate_total(items):
+    total = 0
+    for item in items:
+        if item["price"] > 0:
+            total += item["price"]
+    return total</textarea>
+
+    <button id="analyze">Analyze Code</button>
+    <p id="message"></p>
+
+    <section id="results" class="hidden">
+      <div class="score-card">
+        <span>Quality Score</span>
+        <strong id="score">-</strong>
+      </div>
+      <div class="grid">
+        <div><b id="loc">0</b><span>Lines of Code</span></div>
+        <div><b id="functions">0</b><span>Functions</span></div>
+        <div><b id="classes">0</b><span>Classes</span></div>
+        <div><b id="complexity">0</b><span>Avg Complexity</span></div>
+        <div><b id="maintainability">0</b><span>Maintainability</span></div>
+      </div>
+      <h2>Suggestions</h2>
+      <ul id="suggestions"></ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
